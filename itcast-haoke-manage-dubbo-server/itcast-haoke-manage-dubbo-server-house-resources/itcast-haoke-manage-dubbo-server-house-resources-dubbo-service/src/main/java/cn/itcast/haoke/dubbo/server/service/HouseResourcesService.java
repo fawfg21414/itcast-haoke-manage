@@ -1,9 +1,9 @@
-package cn.itcast.haoke.dubbo.server.api;
+package cn.itcast.haoke.dubbo.server.service;
 
 import cn.itcast.haoke.dubbo.server.pojo.HouseResources;
 import cn.itcast.haoke.dubbo.server.pojo.PageInfo;
 
-public interface ApiHouseResourcesService {
+public interface HouseResourcesService {
     /**
      *
      * @param houseResources
@@ -13,13 +13,14 @@ public interface ApiHouseResourcesService {
     int saveHouseResources(HouseResources houseResources);
 
     /**
-     * 分页查询房源列表
+     *分页查询房源列表
      * @param page 当前页
      * @param pageSize 页面大小
      * @param queryCondition 查询条件
      * @return
      */
     PageInfo<HouseResources> queryHouseResourcesList(int page, int pageSize, HouseResources queryCondition);
+
 
     /**
      * 根据id查找房源数据
@@ -28,5 +29,4 @@ public interface ApiHouseResourcesService {
      * @return
      */
     HouseResources queryHouseResourcesById(Long id);
-
 }
